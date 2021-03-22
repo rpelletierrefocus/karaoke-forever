@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  karaoke-forever:
+    ports:
+      - '8888:80'
+    volumes:
+      - '/karaoke:/cdgfiles'
+      - ./karaoke-forever:/karaoke-forever
+    image: karoke
+    container_name: karaoke
+    restart: always
